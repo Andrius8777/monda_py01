@@ -1,4 +1,4 @@
-### Pridedi produktą
+0### Pridedi produktą
 
 def prideti_produkta(saldytuvas, produktas, kiekis):
     if produktas in saldytuvas:
