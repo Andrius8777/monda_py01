@@ -15,7 +15,7 @@ class Product:
 
 class Recipe:
     ingredients = []
-    instructions = []
+    instructions = [] ####nieko nereiskia
 
     def add_ingredient(self, product:Product):
         self.ingredients.append(product)
@@ -40,7 +40,7 @@ class Fridge:
         return product.quantity - quantity
 
     def add_product(self, name:str, quantity:float):
-        product_id, product = self.check_product(name) # nenaudojamus kintamuosius galima vadinti tiesiog _
+        product_id, product = self.check_product(name) # nenaudojamus product_id atejas is funkcijos check_product
         if product is not None:
             product.quantity += quantity
         else:
@@ -58,9 +58,24 @@ class Fridge:
 
 def main():
     fridge = Fridge()
-    # meniukas | vartotojo sasaja
 
-# apple = Product('apple', 1)
-# another_apple = Product('apple', 1)
-
-# print(apple == another_apple)
+while True:
+    print('===[ Šaldytuvas ]===')
+    print('0: Išeiti')
+    print('1: Pridėti produktą')
+    print('2: Išimti produktą')
+    print('3: Patikrinti kiekį šaldytuve')
+    print('4: Patikrinti receptą')
+    print('5: Išspausdinti šaldytuvo turinį')
+    pasirinkimas = input('Pasirinkimas: ')
+    if pasirinkimas.startswith('0'):
+        break
+    elif pasirinkimas.startswith('1'):
+        name = input('Produktas: ')
+        quantity = float(input('Kiekis: '))
+    for product in quantity:
+        if product.name == name:
+            if product.quantity >= quantity:
+                product.quantity -= quantity
+        
+    
